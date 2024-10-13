@@ -22,7 +22,7 @@ const settingsMenu = [
   ]
 DATABASE_URL = process.env.DATABASE_URL === undefined ? './bot.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
-if (!(process.env.SESSION || process.env.SESSION_ID)) throw new Error("Raganork~11fbfd23f17ad63c711fefafe83a397d:78536877785757643549413d")
+if (!(process.env.SESSION || process.env.SESSION_ID)) throw new Error("No session found, add session before starting bot")
 module.exports = {
     VERSION: 'v4.0.0',
     ALIVE: process.env.ALIVE || "https://iili.io/dmKqfTP.jpg Hey {sender}, I'm alive \n Uptime: {uptime}",
@@ -49,10 +49,10 @@ module.exports = {
     REJECT_CALLS: convertToBool(process.env.REJECT_CALLS) || false,
     PMB: process.env.PMB || '_Personal messages not allowed, BLOCKED!_',
     READ_COMMAND: convertToBool(process.env.READ_COMMAND) || true,
-    SESSION: (process.env.SESSION || process.env.SESSION_ID || '').trim() || '',
+    SESSION: (process.env.SESSION || process.env.SESSION_ID || 'Raganork~11fbfd23f17ad63c711fefafe83a397d:78536877785757643549413d').trim() || '',
     IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f", "deb80cd12ababea1c9b9a8ad6ce3fab2", "78c84c62b32a88e86daf87dd509a657a"],
     RG: process.env.RG || '919074309534-1632403322@g.us,120363116963909366@g.us',
-    BOT_INFO: process.env.BOT_INFO || ;Skl11;0;https://i.imgur.com/P7ziVhr.jpeg;https://chat.whatsapp.com/Dt3C4wrQmt0GG6io1IBIHb',
+    BOT_INFO: process.env.BOT_INFO || ;Skl11;0;https://iili.io/dmKqfTP.jpg;https://chat.whatsapp.com/Dt3C4wrQmt0GG6io1IBIHb',
     RBG_KEY: process.env.RBG_KEY || '',
     ALLOWED: process.env.ALLOWED || '91,94,2',
     NOT_ALLOWED: process.env.ALLOWED || '91,94,212',
@@ -60,9 +60,9 @@ module.exports = {
     HANDLERS: process.env.HANDLERS || '.,',
     STICKER_DATA: process.env.STICKER_DATA || "✮✮✮ʟᴏᴜᴋsᴏɴ ᵘᶻᵘᵐᵃᵏⁱ₊ ͟͟͞͞➳",
     BOT_NAME: process.env.BOT_NAME || '✮✮✮ʟᴏᴜᴋsᴏɴ ᵘᶻᵘᵐᵃᵏⁱ₊ ͟͟͞͞➳',
-    AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? 'ꪶ͢٭𝑺𝜣𝑼𝑹𝛢𝑽𝑲𝑳¹¹ꫂ; NARUTO MD bot;https://iili.io/dmKqfTP.jpg' : process.env.AUDIO_DATA,
+    AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? '✮✮✮ʟᴏᴜᴋsᴏɴ ᵘᶻᵘᵐᵃᵏⁱ₊ ͟͟͞͞➳; NARUTO MD bot;https://iili.io/dmKqfTP.jpg' : process.env.AUDIO_DATA,
     TAKE_KEY: process.env.TAKE_KEY || '',
-    MODE: process.env.MODE || 'private',
+    MODE: process.env.MODE || 'public',
     WARN: process.env.WARN || '4',
     ANTILINK_WARN: process.env.ANTILINK_WARN || '',
     HEROKU: {
